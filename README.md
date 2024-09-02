@@ -30,3 +30,35 @@ JavaScript allows developers to create rich web applications by manipulating the
 
 > Understanding these data types is crucial for variable manipulation and function execution in JavaScript.
 </details>
+
+
+## Contributing
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
+
+### How to Contribute
+* Fork the Project
+* Create your Feature Branch (git checkout -b feature/AmazingFeature)
+* Commit your Changes (git commit -m 'Add some AmazingFeature')
+* Push to the Branch (git push origin feature/AmazingFeature)
+* Open a Pull Request
+
+### Contributor Guidelines
+
+* Follow the coding style and guidelines laid out in the CONTRIBUTING.md file.
+* Ensure that your code passes all tests before submitting.
+* Keep your commits organized and clear.
+* Feel free to open an issue for any feature requests or bug reports.
+
+# Contributors
+Thanks to all the amazing people who have contributed to this project!
+
+<a href="https://github.com/holasoymalva/100-questions-about-javascript/graphs/contributors"> <img src="https://contrib.rocks/image?repo=holasoymalva/100-questions-about-javascript"/></a>
+
+## New Contributors
+We welcome new contributors to the project! If you'd like to be a part of this initiative, just follow the steps in the How to Contribute section above. We are happy to review pull requests and collaborate on improving the project together!
+
+## License
+
+Distributed under the MIT License. See LICENSE for more information.
+
+
