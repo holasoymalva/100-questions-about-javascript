@@ -32,6 +32,68 @@ JavaScript allows developers to create rich web applications by manipulating the
 </details>
 
 
+<details>
+<summary>3. What is the difference between `undefined` and `null` in JavaScript?</summary>
+
+  **Answer**: In JavaScript, `undefined` and `null` are distinct values that represent the absence of a value, but they are used in different contexts:
+
+`undefined`: A variable is `undefined` when it is declared but not yet assigned a value. It represents a lack of initialization.
+
+Example:
+```javascript
+let a;
+console.log(a); // Output: undefined
+```
+
+`null`: A variable is `null` when it is explicitly assigned a null value. It represents the intentional absence of any object or value.
+
+Example:
+```javascript
+let b = null;
+console.log(b); // Output: null
+```
+
+> While both `undefined` and `null` are used to denote "no value," `undefined` is usually the default state of uninitialized variables, whereas `null` is explicitly set by the programmer to indicate that a variable should have no value.
+</details>
+
+<details>
+<summary> 4. What are JavaScript closures, and why are they useful? </summary>
+
+  **Answer**: A closure is a feature in JavaScript where an inner function has access to the outer (enclosing) function's variables—even after the outer function has finished executing. Closures are created every time a function is created, at function creation time.
+
+**How Closures Work**: Closures enable functions to "remember" their lexical scope, allowing them to access variables from their outer scope even when the function is executed outside that scope.
+
+Example of a Closure:
+
+```javascript
+function outerFunction(outerVariable) {
+  return function innerFunction(innerVariable) {
+    console.log('Outer Variable: ' + outerVariable);
+    console.log('Inner Variable: ' + innerVariable);
+  };
+}
+
+const newFunction = outerFunction('outside');
+newFunction('inside');
+// Output:
+// Outer Variable: outside
+// Inner Variable: inside
+```
+
+In this example, `innerFunction` retains access to `outerVariable` from `outerFunction` even after `outerFunction` has finished executing.
+
+Use Cases of Closures:
+- **Data Encapsulation**: Closures can be used to create private variables or methods within a function.
+- **Callbacks**: Closures are commonly used with callbacks in asynchronous programming, such as event handlers or setTimeouts.
+- **Functional Programming**: Closures enable functional programming patterns, allowing functions to be composed and reused.
+
+
+> Closures are powerful tools in JavaScript that enable data hiding and state management, making them essential for building complex applications.
+
+</details>
+
+---
+
 ## Contributing
 Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
 
