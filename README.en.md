@@ -1,5 +1,7 @@
 # 100 Questions about Javascript
 
+[![](https://img.shields.io/badge/README-Español-red)](./README.md)
+
 JavaScript is one of the most popular programming languages in the world, essential for web development, and a must-know for software developers. Whether you are preparing for a job interview or brushing up on your JavaScript knowledge, this comprehensive list of 100 questions and answers will help you solidify your understanding of JavaScript.
 
 <details>
