@@ -1,126 +1,122 @@
-# 100 Questions about Javascript
 
-JavaScript is one of the most popular programming languages in the world, essential for web development, and a must-know for software developers. Whether you are preparing for a job interview or brushing up on your JavaScript knowledge, this comprehensive list of 100 questions and answers will help you solidify your understanding of JavaScript.
+# 100 Preguntas sobre Javascript
+
+JavaScript es uno de los lenguajes de programación más populares del mundo, esencial para el desarrollo web y un conocimiento imprescindible para los desarrolladores de software. Ya sea que estés preparándote para una entrevista de trabajo o repasando tus conocimientos de JavaScript, esta lista completa de 100 preguntas y respuestas te ayudará a solidificar tu comprensión de JavaScript.
 
 <details>
-<summary>1- What is JavaScript?</summary>
+<summary>1- ¿Qué es JavaScript?</summary>
 
-  **Answer**: JavaScript is a high-level, dynamic, untyped, and interpreted programming language. It is primarily used for creating interactive and dynamic content on web pages. JavaScript is versatile and can be used on both the client-side and server-side (Node.js).
+  **Respuesta**: JavaScript es un lenguaje de programación de alto nivel, dinámico, no tipado e interpretado. Se utiliza principalmente para crear contenido interactivo y dinámico en las páginas web. JavaScript es versátil y puede ser utilizado tanto en el lado del cliente como en el lado del servidor (Node.js).
 
-JavaScript allows developers to create rich web applications by manipulating the DOM (Document Object Model), handling events, and communicating with servers through AJAX requests. It is also a core technology of the web, alongside HTML and CSS.
+JavaScript permite a los desarrolladores crear aplicaciones web enriquecidas mediante la manipulación del DOM (Modelo de Objeto de Documento), el manejo de eventos y la comunicación con servidores a través de solicitudes AJAX. También es una tecnología fundamental de la web, junto con HTML y CSS.
 
 </details>
 
-
 <details>
-<summary>2. What are the different data types in JavaScript?</summary>
+<summary>2. ¿Cuáles son los diferentes tipos de datos en JavaScript?</summary>
 
-  **Answer**: 
-  1. Primitive Data Types:
-     - String: Represents a sequence of characters, e.g., "Hello, World!".
-     - Number: Represents both integer and floating-point numbers, e.g., 42 or 3.14.
-     - Boolean: Represents logical entities with two values: true or false.
-     - Undefined: A variable that has been declared but not assigned a value has the type undefined.
-     - Null: Represents the intentional absence of any object value, often used to indicate "no value".
-     - Symbol (ES6): A unique and immutable primitive value used as the key of an object property.
-     - BigInt (ES2020): Represents integers with arbitrary precision, allowing for manipulation of large integers beyond the safe integer limit for numbers.
+  **Respuesta**: 
+  1. Tipos de Datos Primitivos:
+     - String: Representa una secuencia de caracteres, por ejemplo, "¡Hola, Mundo!".
+     - Number: Representa números enteros y de punto flotante, por ejemplo, 42 o 3.14.
+     - Boolean: Representa entidades lógicas con dos valores: true o false.
+     - Undefined: Una variable que ha sido declarada pero no se le ha asignado un valor tiene el tipo undefined.
+     - Null: Representa la ausencia intencional de cualquier valor de objeto, a menudo se utiliza para indicar "sin valor".
+     - Symbol (ES6): Un valor primitivo único e inmutable que se utiliza como clave de una propiedad de objeto.
+     - BigInt (ES2020): Representa enteros con precisión arbitraria, lo que permite la manipulación de números enteros grandes más allá del límite de enteros seguros para los números.
 
-  2. Non-Primitive Data Types:
-     - Object: A collection of key-value pairs, often used to store more complex data and entities.
+  2. Tipos de Datos No Primitivos:
+     - Object: Una colección de pares clave-valor, a menudo utilizada para almacenar datos y entidades más complejas.
 
-> Understanding these data types is crucial for variable manipulation and function execution in JavaScript.
+> Entender estos tipos de datos es crucial para la manipulación de variables y la ejecución de funciones en JavaScript.
 </details>
 
-
 <details>
-<summary>3. What is the difference between `undefined` and `null` in JavaScript?</summary>
+<summary>3. ¿Cuál es la diferencia entre `undefined` y `null` en JavaScript?</summary>
 
-  **Answer**: In JavaScript, `undefined` and `null` are distinct values that represent the absence of a value, but they are used in different contexts:
+  **Respuesta**: En JavaScript, `undefined` y `null` son valores distintos que representan la ausencia de un valor, pero se utilizan en diferentes contextos:
 
-`undefined`: A variable is `undefined` when it is declared but not yet assigned a value. It represents a lack of initialization.
+`undefined`: Una variable es `undefined` cuando ha sido declarada pero aún no se le ha asignado un valor. Representa una falta de inicialización.
 
-Example:
+Ejemplo:
 ```javascript
 let a;
-console.log(a); // Output: undefined
+console.log(a); // Salida: undefined
 ```
 
-`null`: A variable is `null` when it is explicitly assigned a null value. It represents the intentional absence of any object or value.
+`null`: Una variable es `null` cuando se le asigna explícitamente un valor nulo. Representa la ausencia intencional de cualquier objeto o valor.
 
-Example:
+Ejemplo:
 ```javascript
 let b = null;
-console.log(b); // Output: null
+console.log(b); // Salida: null
 ```
 
-> While both `undefined` and `null` are used to denote "no value," `undefined` is usually the default state of uninitialized variables, whereas `null` is explicitly set by the programmer to indicate that a variable should have no value.
+> Aunque ambos `undefined` y `null` se utilizan para denotar "sin valor", `undefined` es usualmente el estado por defecto de las variables no inicializadas, mientras que `null` es establecido explícitamente por el programador para indicar que una variable no debería tener valor.
 </details>
 
 <details>
-<summary> 4. What are JavaScript closures, and why are they useful? </summary>
+<summary> 4. ¿Qué son los closures en JavaScript y por qué son útiles? </summary>
 
-  **Answer**: A closure is a feature in JavaScript where an inner function has access to the outer (enclosing) function's variables—even after the outer function has finished executing. Closures are created every time a function is created, at function creation time.
+  **Respuesta**: Un closure es una característica en JavaScript donde una función interna tiene acceso a las variables de la función externa (que la envuelve), incluso después de que la función externa ha terminado de ejecutarse. Los closures se crean cada vez que se crea una función, en el momento de la creación de la función.
 
-**How Closures Work**: Closures enable functions to "remember" their lexical scope, allowing them to access variables from their outer scope even when the function is executed outside that scope.
+**Cómo funcionan los Closures**: Los closures permiten a las funciones "recordar" su ámbito léxico, permitiéndoles acceder a variables de su ámbito externo incluso cuando la función se ejecuta fuera de ese ámbito.
 
-Example of a Closure:
+Ejemplo de un Closure:
 
 ```javascript
 function outerFunction(outerVariable) {
   return function innerFunction(innerVariable) {
-    console.log('Outer Variable: ' + outerVariable);
-    console.log('Inner Variable: ' + innerVariable);
+    console.log('Variable Externa: ' + outerVariable);
+    console.log('Variable Interna: ' + innerVariable);
   };
 }
 
-const newFunction = outerFunction('outside');
-newFunction('inside');
-// Output:
-// Outer Variable: outside
-// Inner Variable: inside
+const newFunction = outerFunction('fuera');
+newFunction('dentro');
+// Salida:
+// Variable Externa: fuera
+// Variable Interna: dentro
 ```
 
-In this example, `innerFunction` retains access to `outerVariable` from `outerFunction` even after `outerFunction` has finished executing.
+En este ejemplo, `innerFunction` conserva el acceso a `outerVariable` de `outerFunction` incluso después de que `outerFunction` ha terminado de ejecutarse.
 
-Use Cases of Closures:
-- **Data Encapsulation**: Closures can be used to create private variables or methods within a function.
-- **Callbacks**: Closures are commonly used with callbacks in asynchronous programming, such as event handlers or setTimeouts.
-- **Functional Programming**: Closures enable functional programming patterns, allowing functions to be composed and reused.
+Casos de Uso de los Closures:
+- **Encapsulación de Datos**: Los closures se pueden usar para crear variables o métodos privados dentro de una función.
+- **Callbacks**: Los closures se usan comúnmente con callbacks en programación asincrónica, como manejadores de eventos o setTimeouts.
+- **Programación Funcional**: Los closures permiten patrones de programación funcional, permitiendo que las funciones se compongan y reutilicen.
 
-
-> Closures are powerful tools in JavaScript that enable data hiding and state management, making them essential for building complex applications.
+> Los closures son herramientas poderosas en JavaScript que permiten ocultar datos y gestionar el estado, lo que los hace esenciales para construir aplicaciones complejas.
 
 </details>
 
 ---
 
-## Contributing
-Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
+## Contribuyendo
+Las contribuciones son lo que hace que la comunidad de código abierto sea un lugar increíble para aprender, inspirarse y crear. Agradecemos enormemente cualquier contribución que realices.
 
-### How to Contribute
-* Fork the Project
-* Create your Feature Branch (git checkout -b feature/AmazingFeature)
-* Commit your Changes (git commit -m 'Add some AmazingFeature')
-* Push to the Branch (git push origin feature/AmazingFeature)
-* Open a Pull Request
+### Cómo Contribuir
+* Haz un fork del proyecto
+* Crea tu rama de característica (git checkout -b feature/AmazingFeature)
+* Realiza tus cambios (git commit -m 'Agrega una característica increíble')
+* Sube a la rama (git push origin feature/AmazingFeature)
+* Abre un Pull Request
 
-### Contributor Guidelines
+### Pautas para Contribuyentes
 
-* Follow the coding style and guidelines laid out in the CONTRIBUTING.md file.
-* Ensure that your code passes all tests before submitting.
-* Keep your commits organized and clear.
-* Feel free to open an issue for any feature requests or bug reports.
+* Sigue el estilo de codificación y las pautas descritas en el archivo CONTRIBUTING.md.
+* Asegúrate de que tu código pase todas las pruebas antes de enviarlo.
+* Mantén tus commits organizados y claros.
+* Siéntete libre de abrir un issue para cualquier solicitud de característica o reporte de error.
 
-# Contributors
-Thanks to all the amazing people who have contributed to this project!
+# Contribuyentes
+¡Gracias a todas las personas increíbles que han contribuido a este proyecto!
 
 <a href="https://github.com/holasoymalva/100-questions-about-javascript/graphs/contributors"> <img src="https://contrib.rocks/image?repo=holasoymalva/100-questions-about-javascript"/></a>
 
-## New Contributors
-We welcome new contributors to the project! If you'd like to be a part of this initiative, just follow the steps in the How to Contribute section above. We are happy to review pull requests and collaborate on improving the project together!
+## Nuevos Contribuyentes
+¡Damos la bienvenida a nuevos contribuyentes al proyecto! Si deseas ser parte de esta iniciativa, simplemente sigue los pasos en la sección Cómo Contribuir anterior. ¡Estamos encantados de revisar pull requests y colaborar para mejorar el proyecto juntos!
 
-## License
+## Licencia
 
-Distributed under the MIT License. See LICENSE for more information.
-
-
+Distribuido bajo la Licencia MIT. Consulta el archivo LICENSE para obtener más información.
