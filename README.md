@@ -1,6 +1,8 @@
 
 # 100 Preguntas sobre Javascript
 
+[![](https://img.shields.io/badge/README-English-blue)](./README.en.md)
+
 JavaScript es uno de los lenguajes de programación más populares del mundo, esencial para el desarrollo web y un conocimiento imprescindible para los desarrolladores de software. Ya sea que estés preparándote para una entrevista de trabajo o repasando tus conocimientos de JavaScript, esta lista completa de 100 preguntas y respuestas te ayudará a solidificar tu comprensión de JavaScript.
 
 <details>
